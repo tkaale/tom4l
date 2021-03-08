@@ -1,4 +1,4 @@
-const navBtn = document.querySelector('.nav__mobile-btn');
+const navBtn = document.querySelector('.nav__mobile-bars-btn');
 const nav = document.querySelector('.nav__mobile-list');
 
 function menuStart() {

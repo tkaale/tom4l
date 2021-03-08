@@ -1,6 +1,6 @@
 //COLORS
 
-$main-color: #1755e7;
+$main-color: #4169E1;
 $secondary-color: #164dcc;
 $pure-white: #fff;
 $light-white: #eee;
@@ -12,10 +12,11 @@ $dark: #2e2e2e;
 @mixin navItem {
     position: relative;
     padding: .2em .5em;
-    color: $pure-white;
+    color: $dark;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 1px;
+    font-weight: 400;
+    letter-spacing: .5px;
 }
 
 @mixin buttonDecoration {
