@@ -1,0 +1,154 @@
+// font-family: 'Shadows Into Light Two', cursive;
+
+@import "./components";
+@import "./mixins-colors";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; //10px
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.6rem;
+    background-color: #333;
+}
+
+//NAV
+
+.nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+
+    &__brand {
+        display: flex;
+        color: $pure-white;
+        background: none;
+        border: none;
+        padding: 1em;
+        width: 10%;
+
+        &-ico {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color:$pure-white;
+        }
+
+        &-title {
+            margin-left: .3em;
+            font-family: 'Shadows Into Light Two', cursive;
+            font-size: 4rem;
+            text-transform: uppercase;
+
+            span {
+                color: $main-color;
+            }
+        }
+    }
+
+    &__desktop {
+        display: none;
+    }
+
+    &__mobile {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        &-btn {
+            padding: 0.5em 1em;
+            margin: .5em;
+            background-color: transparent;
+            border-color: transparent;
+            color: $pure-white;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        &-list {
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: $dark;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+           
+            &--active {
+                transform: translateX(0);
+            }
+
+            &-item {
+                font-size: 2.5rem;
+                margin: 1em 3em;
+                @include navItem;
+                @include navItemHover;
+
+                &:first-child {
+                    margin-top: 3em;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------//
+//MEDIA QUERIES//
+//---------------------------------//
+
+@media (min-width:768px) {
+    .nav {
+        &__desktop {
+            display: block;
+
+            &-list {
+                display: flex;
+                list-style: none;
+                margin: 0.5em 1em;
+
+                &-item {
+                    font-size: 2.5rem;
+
+                    a {
+                        @include navItem;
+                        @include navItemHover;
+                    }
+                }
+            }
+        }
+
+        &__mobile {
+            display: none;
+        }
+    }
+}

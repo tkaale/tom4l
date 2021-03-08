@@ -1,0 +1,44 @@
+//COLORS
+
+$main-color: #1755e7;
+$secondary-color: #164dcc;
+$pure-white: #fff;
+$light-white: #eee;
+$dark: #2e2e2e;
+
+
+//MIXINS
+
+@mixin navItem {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $pure-white;
+    padding: .2em .5em;
+}
+
+@mixin navItemHover {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        bottom: 0;
+        border-bottom: 3px solid $main-color;
+        transition: width .3s;
+    }
+
+    &::before {
+        right: 50%;
+    }
+
+    &::after {
+        left: 50%;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        width: 50%;
+    }
+}
