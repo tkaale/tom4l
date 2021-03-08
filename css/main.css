@@ -46,11 +46,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 10%;
+  padding: 1em;
   color: #fff;
   background: none;
   border: none;
-  padding: 1em;
-  width: 10%;
 }
 
 .nav__brand-ico {
@@ -60,8 +60,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 
 .nav__brand-title {
@@ -112,16 +112,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 100vh;
   background-color: #2e2e2e;
   -webkit-transform: translateX(100%);
@@ -141,11 +141,11 @@ body {
   font-size: 2.5rem;
   margin: 1em 3em;
   position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #fff;
   padding: .2em .5em;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .nav__mobile-list-item::before, .nav__mobile-list-item::after {
@@ -182,19 +182,19 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    list-style: none;
     margin: 0.5em 1em;
+    list-style: none;
   }
   .nav__desktop-list-item {
     font-size: 2.5rem;
   }
   .nav__desktop-list-item a {
     position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
     padding: .2em .5em;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
   }
   .nav__desktop-list-item a::before, .nav__desktop-list-item a::after {
     content: "";

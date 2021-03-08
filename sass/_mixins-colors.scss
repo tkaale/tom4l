@@ -11,14 +11,14 @@ $dark: #2e2e2e;
 
 @mixin navItem {
     position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: $pure-white;
     padding: .2em .5em;
+    color: $pure-white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 
-@mixin navItemHover {
+@mixin buttonDecoration {
     &::before,
     &::after {
         content: "";
