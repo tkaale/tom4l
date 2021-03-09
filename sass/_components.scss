@@ -2,12 +2,13 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  overflow:hidden;
 }
 
 .section-heading {
     position: relative;
     margin-bottom: 2em;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-family: 'Shadows Into Light Two', cursive;
     font-weight: 300;
     text-transform: uppercase;
