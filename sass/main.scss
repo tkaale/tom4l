@@ -155,9 +155,7 @@ body {
         &-title {
             margin: 1.5em .5em .5em;
             font-size: 3rem;
-            font-family: 'Shadows Into Light Two', cursive;
             text-transform: uppercase;
-            letter-spacing: 3px;
 
             span {
                 color: $main-color;
@@ -190,7 +188,7 @@ body {
         width: 280px;
         padding: 1em;
         margin-bottom: 3em;
-        background-color: $pure-white;
+        background-color: transparent;
         border-radius: 10px;
         text-align: center;
         transition: transform 0.5s;
@@ -274,6 +272,7 @@ body {
                 background-color: $light-white;
                 border: 2px solid $main-color;
                 border-radius: 8px;
+                transition: .2s;
 
                 a {
                     font-size: 1.8rem;
@@ -282,6 +281,51 @@ body {
                     font-weight: bold;
                     color: $main-color;
                 }
+
+                &:hover {
+                    background-color: $main-color;
+
+                    a {
+                        color: $pure-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//OFFER
+
+.offer {
+
+    .section-heading {
+        margin-top: 3em;
+    }
+
+    &__box {
+        margin:0 .5em 3em .5em;
+        box-shadow: 5px 5px 10px #2e2e2e2e;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2em;
+            background-color: $light-white;
+
+
+            &-heading {
+                margin-bottom: 1em;
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $main-color;
+
             }
         }
     }
@@ -427,6 +471,7 @@ body {
                 overflow: hidden;
 
                 img {
+                    object-position: right bottom;
                     transform: skew(15deg) scale(1.6);
                 }
             }
@@ -437,6 +482,38 @@ body {
                 margin: 0 1em 0 1em;
                 text-align: start;
                 transform: skew(-15deg);
+            }
+        }
+    }
+
+    .offer {
+
+        &__box {
+            display: flex;
+            width: 100%;
+            height: 300px;
+
+            &-img {
+                width: 50%;
+                height: auto;
+
+                &--right {
+                    order: 1;
+                }
+            }
+
+            &-info {
+                width: 50%;
+
+                &-heading {
+                    font-size: 2.5rem;
+                }
+
+                &-text {
+                
+                    font-size: 1.8rem;
+                }
+
             }
         }
     }
@@ -468,13 +545,22 @@ body {
                 height: 400px;
                 margin-right: 3em;
             }
+
             &-img {
                 height: 400px;
             }
+
             &-right {
                 height: 400px;
                 margin-left: 3em;
             }
+        }
+    }
+
+    .offer {
+
+        &__box {
+            height: 350px;
         }
     }
 }
