@@ -430,6 +430,10 @@ body {
   color: #fff;
 }
 
+.offer {
+  padding: 0 .5em;
+}
+
 .offer .section-heading {
   margin-top: 3em;
 }
