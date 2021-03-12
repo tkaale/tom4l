@@ -7,7 +7,7 @@
 
 .section-heading {
   position: relative;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   font-size: 3rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -431,7 +431,7 @@ body {
 }
 
 .offer {
-  padding: 0 .5em;
+  padding: 1em .5em;
 }
 
 .offer .section-heading {
