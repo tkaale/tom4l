@@ -17,7 +17,7 @@
 }
 
 .section-padding {
-  padding: 3.2em 2em;
+  padding: 0 2em;
 }
 
 .anchor {
@@ -251,7 +251,7 @@ body {
 }
 
 .aboutus .section-heading {
-  margin-top: 0;
+  margin-top: 5em;
 }
 
 .aboutus .section-heading::after {
@@ -302,7 +302,6 @@ body {
   height: 300px;
   width: 280px;
   padding: 1em;
-  margin-bottom: 3em;
   background-color: transparent;
   border-radius: 10px;
   text-align: center;
@@ -310,6 +309,10 @@ body {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.aboutus__card:last-child {
+  margin-bottom: 0;
 }
 
 .aboutus__card:hover {
@@ -328,8 +331,8 @@ body {
   color: #4169E1;
 }
 
-.drive .section-heading {
-  margin-top: 0;
+.drive {
+  margin-bottom: 2em;
 }
 
 .drive__background {
@@ -431,10 +434,7 @@ body {
 
 .offer {
   padding: 1em .5em;
-}
-
-.offer .section-heading {
-  margin-top: 3em;
+  padding-bottom: 0;
 }
 
 .offer__box {
@@ -471,10 +471,92 @@ body {
   color: #4169E1;
 }
 
+.prices {
+  margin-top: 5em;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(54, 54, 54, 0.84916)), to(rgba(219, 219, 219, 0.40098))), url("../img/fog-1819147_1920.jpg");
+  background: linear-gradient(0deg, rgba(54, 54, 54, 0.84916) 0%, rgba(219, 219, 219, 0.40098) 100%), url("../img/fog-1819147_1920.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.prices__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1em;
+}
+
+.prices__box {
+  width: 100%;
+  margin: 0 1em 2em 1em;
+  padding: 0.5em 1em;
+  text-align: center;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 10px #2e2e2e2e;
+          box-shadow: 5px 5px 10px #2e2e2e2e;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.prices__box:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.prices__box-heading {
+  margin: 1em;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.prices__box-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.prices__box-segment {
+  padding: 1em;
+}
+
+.prices__box-segment-price {
+  padding-top: .5em;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #4169E1;
+}
+
+.prices__box-segment-price span {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.prices__box-segment-general--grey {
+  color: grey;
+}
+
+.prices__info {
+  margin: 1em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.prices__info a {
+  color: #4169E1;
+  text-decoration: none;
+}
+
 @media (min-width: 576px) {
-  .aboutus .section-heading {
-    margin-top: 2em;
-  }
   .aboutus__heading {
     width: 400px;
   }
@@ -537,6 +619,9 @@ body {
   }
   .aboutus__card {
     width: 45%;
+  }
+  .aboutus__card-text {
+    height: 200px;
   }
   .drive__boxes {
     display: -webkit-box;
@@ -609,6 +694,21 @@ body {
   .offer__box-info-text {
     font-size: 1.8rem;
   }
+  .prices__boxes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .prices__box {
+    width: 45%;
+    min-width: 320px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -639,6 +739,9 @@ body {
   }
   .offer__box {
     height: 350px;
+  }
+  .prices__box {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */

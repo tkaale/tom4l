@@ -164,7 +164,7 @@ body {
 
 .aboutus {
     .section-heading {
-        margin-top: 0;
+        margin-top: 5em;
 
         &::after {
             position: absolute;
@@ -198,11 +198,14 @@ body {
         height: 300px;
         width: 280px;
         padding: 1em;
-        margin-bottom: 3em;
         background-color: transparent;
         border-radius: 10px;
         text-align: center;
         transition: transform 0.5s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         &:hover {
             transform: scale(1.1);
@@ -223,9 +226,7 @@ body {
 
 
 .drive {
-    .section-heading {
-        margin-top: 0;
-    }
+    margin-bottom: 2em;
 
     &__background {
         background-color: $light-white;
@@ -234,6 +235,7 @@ body {
 
     &__box {
         width: 100%;
+
 
         &-left {
             display: flex;
@@ -312,10 +314,7 @@ body {
 
 .offer {
     padding: 1em .5em;
-
-    .section-heading {
-        margin-top: 3em;
-    }
+    padding-bottom: 0;
 
     &__box {
         margin: 0 .5em 3em .5em;
@@ -334,6 +333,7 @@ body {
             background-color: $light-white;
 
 
+
             &-heading {
                 margin-bottom: 1em;
                 font-size: 2rem;
@@ -346,6 +346,81 @@ body {
     }
 }
 
+//PRICES
+
+.prices {
+    margin-top: 5em;
+    background:linear-gradient(0deg, rgba(54,54,54,0.8491597322522759) 0%, rgba(219,219,219,0.4009804605435925) 100%), url('../img/fog-1819147_1920.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &__boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:0 1em;
+    }
+
+    &__box {
+        width: 100%;
+        margin:0 1em 2em 1em;
+        padding: 0.5em 1em;
+        text-align: center;
+        background-color: $pure-white;
+        box-shadow: 5px 5px 10px #2e2e2e2e;
+        transition: transform .5s;
+
+        &:hover {
+            transform: scale(0.95);
+        }
+
+        &-heading {
+            margin: 1em;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+        }
+
+        &-line {
+            width: 100%;
+            height: 2px;
+            background-color: $light-white;
+        }
+
+        &-segment {
+            padding: 1em;
+
+            &-price {
+                padding-top:.5em;
+                font-size: 2.2rem;
+                font-weight: bold;
+                color: $main-color;
+
+                span {
+                    font-size: 1.5rem;
+                    font-weight: normal;
+
+                }
+            }
+
+            &-general--grey {
+                color: grey;
+            }
+        }
+    }
+
+    &__info  {
+        margin:1em;
+        text-align: center;
+        font-weight: bold;
+        color:white;
+
+        a{
+            color:$main-color;
+            text-decoration: none;
+        }
+    }
+}
+
 
 //----------------------------------//
 //MEDIA QUERIES//
@@ -353,13 +428,11 @@ body {
 @media (min-width:576px) {
 
     .aboutus {
-        .section-heading {
-            margin-top: 2em;
-        }
 
         &__heading {
             width: 400px;
         }
+
         &__card {
             width: 450px;
         }
@@ -389,6 +462,7 @@ body {
         &__heading {
             width: 600px;
         }
+
         &__cards {
             flex-wrap: wrap;
             flex-direction: row;
@@ -397,6 +471,10 @@ body {
 
         &__card {
             width: 45%;
+
+            &-text {
+                height: 200px;
+            }
         }
     }
 
@@ -475,6 +553,21 @@ body {
             }
         }
     }
+
+    .prices {
+
+        &__boxes {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__box {
+            width: 45%;
+            min-width:320px;
+
+        }
+    }
 }
 
 @media (min-width:992px) {
@@ -525,6 +618,12 @@ body {
 
         &__box {
             height: 350px;
+        }
+    }
+    .prices {
+
+        &__box {
+            width: 30%;
         }
     }
 }
