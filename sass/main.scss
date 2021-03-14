@@ -350,20 +350,21 @@ body {
 
 .prices {
     margin-top: 5em;
-    background:linear-gradient(0deg, rgba(54,54,54,0.8491597322522759) 0%, rgba(219,219,219,0.4009804605435925) 100%), url('../img/fog-1819147_1920.jpg');
+    background: linear-gradient(0deg, rgba(54, 54, 54, 0.8491597322522759) 0%, rgba(219, 219, 219, 0.4009804605435925) 100%), url('../img/fog-1819147_1920.jpg');
     background-position: center;
     background-size: cover;
+
 
     &__boxes {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin:0 1em;
+        margin: 0 1em;
     }
 
     &__box {
         width: 100%;
-        margin:0 1em 2em 1em;
+        margin: 0 1em 2em 1em;
         padding: 0.5em 1em;
         text-align: center;
         background-color: $pure-white;
@@ -390,7 +391,7 @@ body {
             padding: 1em;
 
             &-price {
-                padding-top:.5em;
+                padding-top: .5em;
                 font-size: 2.2rem;
                 font-weight: bold;
                 color: $main-color;
@@ -408,15 +409,55 @@ body {
         }
     }
 
-    &__info  {
-        margin:1em;
+    &__info {
+        margin-bottom: 2em;
         text-align: center;
         font-weight: bold;
-        color:white;
+        color: white;
 
-        a{
-            color:$main-color;
+        a {
+            color: $main-color;
             text-decoration: none;
+        }
+    }
+}
+
+//CONTACT
+
+.contact {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-heading {
+            display: flex;
+            font-size: 3.4rem;
+            text-transform: uppercase;
+
+
+            &-title {
+                margin-left: .3em;
+                font-weight: 300;
+
+                span {
+                    color: $main-color;
+                }
+            }
+        }
+
+        &-phone {
+            text-decoration: none;
+            color: $dark;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 3em;
+        }
+
+        &-email {
+            margin-top: 2em;
+            font-size: 2rem;
         }
     }
 }
@@ -564,7 +605,7 @@ body {
 
         &__box {
             width: 45%;
-            min-width:320px;
+            min-width: 320px;
 
         }
     }
@@ -620,6 +661,7 @@ body {
             height: 350px;
         }
     }
+
     .prices {
 
         &__box {
