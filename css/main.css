@@ -214,7 +214,7 @@ body {
 
 .header {
   position: relative;
-  height: 70vh;
+  height: 100vh;
   width: 100vw;
 }
 
@@ -251,7 +251,8 @@ body {
 }
 
 .aboutus .section-heading {
-  margin-top: 5em;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 
 .aboutus .section-heading::after {
@@ -269,6 +270,7 @@ body {
 .aboutus__heading {
   width: 250px;
   margin: 0 auto;
+  margin-bottom: 3em;
   text-align: center;
 }
 
@@ -649,6 +651,9 @@ body {
   }
   .nav__desktop-list-item:hover::before, .nav__desktop-list-item:hover::after {
     width: 50%;
+  }
+  .aboutus .section-heading {
+    margin-top: 5em;
   }
   .aboutus__heading {
     width: 600px;
