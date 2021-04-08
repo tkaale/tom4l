@@ -30,9 +30,10 @@ body {
     top: 0;
     width: 100%;
     height: 80px;
-    background-color: $pure-white;
-    box-shadow: 0 1px 5px #2e2e2e2e;
+    background-color: transparent;
     z-index: 100;
+    transition: .5s;
+
 
     &__navbar {
         display: flex;
@@ -48,10 +49,11 @@ body {
         background: none;
         border: none;
 
+
         &-ico {
             display: flex;
             align-items: center;
-            color: $dark;
+            color: $pure-white;
             text-decoration: none;
         }
 
@@ -78,7 +80,7 @@ body {
             margin: .5em;
             background-color: transparent;
             border-color: transparent;
-            color: $dark;
+            color: $pure-white;
             cursor: pointer;
             z-index: 1000;
         }
@@ -108,6 +110,7 @@ body {
             margin: 1em;
             font-size: 2rem;
             text-align: center;
+            color: $dark;
             @include navItem;
             @include buttonDecoration;
 
@@ -120,6 +123,15 @@ body {
     &__desktop-list {
         display: none;
     }
+}
+
+.shadow-bg {
+    background-color: $pure-white;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+.color {
+    color: $dark;
 }
 
 //HEADER
@@ -495,6 +507,7 @@ body {
 
             &-item {
                 font-size: 2rem;
+                color: $pure-white;
                 @include navItem;
                 @include buttonDecoration;
             }
