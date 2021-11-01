@@ -439,11 +439,13 @@ body {
 //CONTACT
 
 .contact {
+    box-shadow: 5px 5px 10px #2e2e2e2e;
     &__box {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 8em;
 
         &-heading {
             display: flex;
@@ -512,6 +514,10 @@ body {
                 @include buttonDecoration;
             }
         }
+    }
+
+    .color {
+        color:$dark;
     }
 
     .aboutus {
